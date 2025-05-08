@@ -117,13 +117,13 @@
           <div id="radius-section"; class = "paracenter">
             <h3>Parabola Radius Calculation</h3> 
                 \[
-                r_r = \frac{2f}{1 + \cos\phi} = \frac{2(9)}{1 + \cos(67.38^\circ)} = 13 in
+                r_r = \frac{2f}{1 + \cos\phi} = \frac{2(9)}{1 + \cos(67.38^\circ)} = 13 \:in
                 \]
           </div>
           <div id="vertical-section"; class = "paracenter">
             <h3>Vertical Parabola Height Calculation</h3>
             \[
-            H_p = \frac{Wa^2}{16f} = \frac{24^2}{16(9)} = 4 in
+            H_p = \frac{Wa^2}{16f} = \frac{24^2}{16(9)} = 4 \:in
             \]
           </div>
           <div id="arclength-section"; class = "paracenter">
@@ -137,7 +137,7 @@
             \ln \left[ \sec(33.69^\circ) + \tan(33.69^\circ) \right] \right\}
             \]
             \[
-            s = 4.95 in \]
+            s = 4.95 \:in \]
           </div>
         </div>  
 
@@ -184,7 +184,7 @@
             \[\dot{m} = \frac{\dot{Q}}{c_p (T_{\text{out}} - T_{\text{in}})}
             \]
             \[\dot{m} = \frac{5748.28}{1 \cdot (212-54)} \]
-            \[\dot{m} = 0.926 g/s\]
+            \[\dot{m} = 0.926 \:g/s\]
         </div>
         <div id="effciency-section"; class = "paracenter">
             <h3>Overall Efficiency Calculation</h3> 
@@ -205,7 +205,7 @@
             \]
             \[\dot{Q} = 1,274 \cdot 10 \cdot 0.4512
             \]
-            \[\dot{Q} = 5,748.29 BTU/day
+            \[\dot{Q} = 5,748.29\:BTU/day
             \]
         </div>
 
@@ -218,6 +218,8 @@
                 <th>Symbol</th>
                 <th>Value</th>
                 <th>Units</th>
+                <th>Converted Imperial Value</th>
+                <th> Imperial Units</th>
               </tr>
             </thead>
             <tbody>
@@ -226,24 +228,32 @@
                     <td> V </td>
                     <td>0.02933</td>
                     <td>m/s</td>
+                    <td> 0.0962 </td>
+                    <td> ft/s </td>
               </tr>
               <tr>
                 <td>Pipe inner Diameter</td>
                 <td> D <sub>i</sub></td>
                 <td>0.00635</td>
                 <td>m</td>
+                <td>0.25 </td>
+                <td> in </td>
               </tr>
               <tr>
-                <td>Water density</td>
+                <td><a href="https://www.engineeringtoolbox.com/water-density-specific-weight-d_595.html" target="_blank">Water density</a></td>
                 <td> \[\rho\]</td>
                 <td>997</td>
                 <td>kg/m<sup>3</sup></td>
+                <td>62.2407 </td>
+                <td> lb/m<sup>3</sup> </td>
               </tr>
               <tr>
-                <td>kinematic viscosity</td>
+                <td><a href="https://www.engineeringtoolbox.com/water-dynamic-kinematic-viscosity-d_596.html"target="_blank">kinematic viscosity</a></td>
                 <td> \[\upsilon\]</td>
                 <td>\[1.004 \cdot 10^{\text{-6}}\]</td>
-                <td>kg/m<sup>3</sup></td>
+                <td>m<sup>2</sup>/s</td>
+                <td> \[1.0807 \cdot 10^{\text{-5}}\]</td>
+                <td>ft<sup>2</sup>/s </td>
               </tr>
 
               <tr>
@@ -251,24 +261,32 @@
                 <td> Re</td>
                 <td>185.50</td>
                 <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <td><a href="#flowrate">Flow Rate</a></td>
                 <td>\[\dot{v}\]</td>
                 <td>\[0.9288 \cdot 10^{\text{-6}}\]</td>
                 <td>\[m^3/s\]</td>
+                <td> \[3.28 \cdot 10^{\text{-5}}\]</td>
+                <td>ft<sup>3</sup>/s </td>
               </tr>
               <tr>
                 <td><a href="#headloss">Head Loss</a></td>
                 <td> h<sub>f</sub></td>
                 <td>0.00726</td>
                 <td>m</td>
+                <td>0.0238</td>
+                <td> ft </td>
               </tr>
               <tr>
                 <td><a href="#power">Pump Power</a></td>
                 <td> P </td>
                 <td> 0.00006595 </td>
                 <td>W</td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
         </table>
@@ -276,7 +294,7 @@
             <h3>Flowrate Calculation</h3> 
             \[\dot{v} = \frac{\dot{m}}{\rho} \]
             \[\dot{v} =  \frac{0.000926}{997} \]
-            \[\dot{v} = 0.9288 \cdot 10^{\text{-6}} m^{\text{3}} /s \]
+            \[\dot{v} = 0.9288 \cdot 10^{\text{-6}} \:m^{\text{3}} /s \]
     
         </div>
         <div id="Re"; class = "paracenter">
@@ -285,24 +303,71 @@
             \[ V = 0.0.2933 m/s \]
             \[ Re = \frac{V \cdot D_{\text{i}}} {\upsilon} \]
             \[ Re = \frac{0.02933 \cdot 0.00635}{1.004 \cdot 10^{\text{-6}}}\]
-            \[ Re = 185.5 (turbulent) \]
+            \[ Re = 185.5 \:(turbulent) \]
         </div>
         <div id="headloss"; class = "paracenter">
             <h3>Headloss Calculation</h3> 
             \[ h_{\text{f}} = \frac{fL \cdot V^{\text{2}}}{D \cdot 2g} \]
             \[ h_{\text{f}} = \frac{65}{185.5} \cdot \frac{3.048}{0.00635} \cdot \frac{0.02933^2} { 9.81} \]
-            \[ h_{\text{f}} = 0.007261 m \]
+            \[ h_{\text{f}} = 0.007261\: m \]
         </div>
         <div id="power"; class = "paracenter">
             <h3>Pump Power Calculation</h3> 
             \[ P = \rho \cdot g \cdot \dot{v} \cdot  h_{\text{f}} \]
             \[ P = 997 \cdot 9.81 \cdot 0.9288 \cdot 10^{\text{-6}} \cdot 0.007261 \]
-            \[ P = 0.00006595 W \]
+            \[ P = 0.00006595\: W \]
         </div>
 
 
 
-        <li>Support Structures - Truss simplication </li>
+        <li>Support Structures </li>
+        <li>Bottom Fixed Supports </li>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Symbol</th>
+                <th>Value</th>
+                <th>Units</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                    <td><a href="#bottomdis">Max Displacement</a></td>
+                    <td> \[\delta_{\text{max}}\] </td>
+                    <td>0.001473</td>
+                    <td> in </td>
+              </tr>
+            <tr>
+                <td><a href="#bottomstress">Max Stress</a></td>
+                <td> \[\sigma_{\text{max}}\] </td>
+                <td>1224</td>
+                <td> psi </td>
+            </tr>
+            <tr>
+                <td><a href="https://asm.matweb.com/search/specificmaterial.asp?bassnum=ma6061t6" target="_blank">Elastic Modulus</a></td>
+                <td> E </td>
+                <td> 10,000</td>
+                <td> ksi </td>
+            </tr>
+         </tbody>
+        </table>
+
+        <div id="bottomdis"; class = "paracenter">
+            <h3>Max Displacement Calculation</h3> 
+            \[ \delta_{\text{max}} = \frac{4FL^3}{Ebh^3} (rectangular\: cross \:section)\] 
+            \[ \delta_{\text{max}} = \frac{4 \cdot 4.25 \cdot 1.5^3}{10,000 \cdot 10^3 \cdot 2 \cdot 0.125^3}\]
+            \[ \delta_{\text{max}} = 0.00147\: in \]
+        </div>
+        <div id="bottomstress"; class = "paracenter">
+            <h3>Max Stress Calculation</h3> 
+            \[ \sigma_{\text{max}} = \frac{6FL}{bh^2} (rectangular\: cross \:section)\] 
+            \[ \sigma_{\text{max}} = \frac{ 6 \cdot 4.25 \cdot }{2 \cdot  0.125^2}\]
+            \[ \sigma_{\text{max}} = 1224\: psi \]
+        </div>
+
+
+
         <div class = "paracenter">
             FEA and CFD
         </div>
