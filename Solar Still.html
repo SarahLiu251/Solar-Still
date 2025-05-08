@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=1200">
     <title>Homepage - Solar Still </title>
     <link rel="stylesheet" href="Style Still.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
 </head>
 
 
-
-<body>
     <div class="titlecenter"> Solar Still Using Active Mirror </div>
 
     <div class="paracenter">  
@@ -39,25 +42,271 @@
 
         <div class="subtitle"> Methods </div>
     <br>    
-        <div class = "paracenter">
-            Mathematical Models
+        <div class = "subtitlecenter">
+            Mathematical Models  <br>
         </div>
-        <li>Mirror Geomtetry - focal length  </li>
-        <math>
-            f
-        </math>
+        <div class="paracenter"> 
+            Click on the Parameter to bring to calculations
+        </div>
+        <div class = "subtitlecenter">
+            Mirror Geometry 
+        </div>
+       
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Symbol</th>
+                <th>Value</th>
+                <th>Units</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Width of Aperture</td>
+                <td>W<sub>a</sub></td>
+                <td>24</td>
+                <td>inches</td>
+              </tr>
+              <tr>
+                <td><a href="#focal-section">Focal Length</a></td>
+                <td>f</td>
+                <td>9</td>
+                <td>inches</td>
+              </tr>
+              <tr>
+                <td><a href="#angle-section">Angle</a></td>
+                <td>&phi;</td>
+                <td>67.38</td>
+                <td>degrees</td>
+              </tr>
+              <tr>
+                <td><a href="#radius-section">Radius of Parabola</a></td>
+                <td>\[r_r\]</td>
+                <td>13</td>
+                <td>inches</td>
+              </tr>
+              <tr>
+                <td><a href="#vertical-section">Vertical Length of Parabola</a></td>
+                <td> \[H_p\]</td>
+                <td> 4</td>
+                <td>inches </td>
+              </tr>
+              <tr>
+                <td><a href="#arclength-section">Arc Length of Apperature</a></td>
+                <td> s </td>
+                <td> 4.95 </td>
+                <td>inches </td>
+              </tr>
+ 
+            </tbody>
+          </table>
+          <div id="focal-section"; class = "paracenter">
+            <h3>Focal Length Calculation</h3> 
+                \[f = \frac{Wa}{4 \tan\left(\frac{\phi}{2}\right)} = \frac{x}{4a}\]
+          </div>
+          <div id="angle-section"; class = "paracenter">
+            <h3> Radial Angle Calculation</h3> 
+            \[
+            \frac{24 \text{ in}}{4 \tan\left(\frac{\phi}{2}\right)} = 9 
+            \]
+            \[
+            \phi = 67.38^\circ
+            \]
+          </div>
+          <div id="radius-section"; class = "paracenter">
+            <h3>Parabola Radius Calculation</h3> 
+                \[
+                r_r = \frac{2f}{1 + \cos\phi} = \frac{2(9)}{1 + \cos(67.38^\circ)} = 13 in
+                \]
+          </div>
+          <div id="vertical-section"; class = "paracenter">
+            <h3>Vertical Parabola Height Calculation</h3>
+            \[
+            H_p = \frac{Wa^2}{16f} = \frac{24^2}{16(9)} = 4 in
+            \]
+          </div>
+          <div id="arclength-section"; class = "paracenter">
+            <h3>Arc Length Calculation</h3> 
+            \[
+            s = \frac{H_p}{2} \left\{ \sec\left(\frac{\phi}{2}\right) \cdot \tan\left(\frac{\phi}{2}\right) +
+            \ln \left[ \sec\left(\frac{\phi}{2}\right) + \tan\left(\frac{\phi}{2}\right) \right] \right\}
+            \]
+            \[
+            s = \frac{4}{2} \left\{ \sec(33.69^\circ) \cdot \tan(33.69^\circ) +
+            \ln \left[ \sec(33.69^\circ) + \tan(33.69^\circ) \right] \right\}
+            \]
+            \[
+            s = 4.95 in \]
+          </div>
+        </div>  
+
         <li>Heat Transfers - Radiation, thrugh material, minimize heat loss  </li>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Symbol</th>
+                <th>Value</th>
+                <th>Units</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#massflowrate-section">Mass flow rate</a></td>
+                <td> \[\dot{m}\]</sub></td>
+                <td>0.926</td>
+                <td>g/s</td>
+              </tr>
+              <tr>
+                <td><a href="#heatflow-section">Heat absorbed </a></td>
+                <td> \[\dot{Q}\]</sub></td>
+                <td>5,748.29</td>
+                <td> BTU/day</td>
+              </tr>
+              <tr>
+                <td> <a href= "https://re.jrc.ec.europa.eu/pvg_tools/en/#MR" target="_blank">Solar Irradiation </a></td>
+                <td> G </td>
+                <td>1,274</td>
+                <td>BTU/ft<sup>2</sup></td>
+              </tr>
+              <tr>
+                <td> <a href= "#effciency-section">Overall Efficiency </a></td>
+                <td> \[\eta\]</td>
+                <td>0.4512</td>
+                <td></td>
+              </tr>
+            </tbody>
+        </table>
+        <div id="massflowrate-section"; class = "paracenter">
+            <h3>Mass Flow Rate Calculation</h3> 
+            \[\dot{m} = \frac{\dot{Q}}{c_p (T_{\text{out}} - T_{\text{in}})}
+            \]
+            \[\dot{m} = \frac{5748.28}{1 \cdot (212-54)} \]
+            \[\dot{m} = 0.926 g/s\]
+        </div>
+        <div id="effciency-section"; class = "paracenter">
+            <h3>Overall Efficiency Calculation</h3> 
+            \[\eta_{\text{optical}} = 0.94 \cdot 0.90
+            \]
+            \[
+            \eta_{\text{thermal}} = 0.67 \cdot 0.79
+            \]
+            \[
+            \eta = \eta_{\text{optical}} \cdot \eta_{\text{thermal}}\]
+            \[
+            \eta = 0.4512
+            \]
+        </div>
+        <div id="heatflow-section"; class = "paracenter">
+            <h3>Heat Absorbed Calculation</h3> 
+            \[\dot{Q} = G \cdot A \cdot \eta
+            \]
+            \[\dot{Q} = 1,274 \cdot 10 \cdot 0.4512
+            \]
+            \[\dot{Q} = 5,748.29 BTU/day
+            \]
+        </div>
+
+
+        <li> Pump Power Requirement </li>     
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Symbol</th>
+                <th>Value</th>
+                <th>Units</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                    <td><a href="#Re">Velocity</a></td>
+                    <td> V </td>
+                    <td>0.02933</td>
+                    <td>m/s</td>
+              </tr>
+              <tr>
+                <td>Pipe inner Diameter</td>
+                <td> D <sub>i</sub></td>
+                <td>0.00635</td>
+                <td>m</td>
+              </tr>
+              <tr>
+                <td>Water density</td>
+                <td> \[\rho\]</td>
+                <td>997</td>
+                <td>kg/m<sup>3</sup></td>
+              </tr>
+              <tr>
+                <td>kinematic viscosity</td>
+                <td> \[\upsilon\]</td>
+                <td>\[1.004 \cdot 10^{\text{-6}}\]</td>
+                <td>kg/m<sup>3</sup></td>
+              </tr>
+
+              <tr>
+                <td><a href="#Re">Reynolds Number</a></td>
+                <td> Re</td>
+                <td>185.50</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><a href="#flowrate">Flow Rate</a></td>
+                <td>\[\dot{v}\]</td>
+                <td>\[0.9288 \cdot 10^{\text{-6}}\]</td>
+                <td>\[m^3/s\]</td>
+              </tr>
+              <tr>
+                <td><a href="#headloss">Head Loss</a></td>
+                <td> h<sub>f</sub></td>
+                <td>0.00726</td>
+                <td>m</td>
+              </tr>
+              <tr>
+                <td><a href="#power">Pump Power</a></td>
+                <td> P </td>
+                <td> 0.00006595 </td>
+                <td>W</td>
+              </tr>
+            </tbody>
+        </table>
+        <div id="flowrate"; class = "paracenter">
+            <h3>Flowrate Calculation</h3> 
+            \[\dot{v} = \frac{\dot{m}}{\rho} \]
+            \[\dot{v} =  \frac{0.000926}{997} \]
+            \[\dot{v} = 0.9288 \cdot 10^{\text{-6}} m^{\text{3}} /s \]
+    
+        </div>
+        <div id="Re"; class = "paracenter">
+            <h3>Reynolds Calculation</h3> 
+            \[ V = \frac{4 \cdot 0.9288 \cdot 10^{\text{-6}}}{\pi \cdot 0.00635^{\text{2}}} \]
+            \[ V = 0.0.2933 m/s \]
+            \[ Re = \frac{V \cdot D_{\text{i}}} {\upsilon} \]
+            \[ Re = \frac{0.02933 \cdot 0.00635}{1.004 \cdot 10^{\text{-6}}}\]
+            \[ Re = 185.5 (turbulent) \]
+        </div>
+        <div id="headloss"; class = "paracenter">
+            <h3>Headloss Calculation</h3> 
+            \[ h_{\text{f}} = \frac{fL \cdot V^{\text{2}}}{D \cdot 2g} \]
+            \[ h_{\text{f}} = \frac{65}{185.5} \cdot \frac{3.048}{0.00635} \cdot \frac{0.02933^2} { 9.81} \]
+            \[ h_{\text{f}} = 0.007261 m \]
+        </div>
+        <div id="power"; class = "paracenter">
+            <h3>Pump Power Calculation</h3> 
+            \[ P = \rho \cdot g \cdot \dot{v} \cdot  h_{\text{f}} \]
+            \[ P = 997 \cdot 9.81 \cdot 0.9288 \cdot 10^{\text{-6}} \cdot 0.007261 \]
+            \[ P = 0.00006595 W \]
+        </div>
+
+
+
         <li>Support Structures - Truss simplication </li>
         <div class = "paracenter">
             FEA and CFD
         </div>
         <li>eee</li>
-
-
-
-
-
-
 
     <br>
     <div class="subtitlecenter"> About Us </div>
@@ -94,15 +343,15 @@
 
 <br>    
     <div class="subtitlecenter"> References </div>
-        <li> <a href="https://doi.org/10.1016/j.desal.2011.03.069" target="_blank">Novel and low cost designs of portable solar stills</a> <br>
-        <li> <a href="https://doi.org/10.1016/j.matpr.2020.09.598" target="_blank">Stepped solar still: A review on designs analysis</a><br>
-        <li> <a href="https://doi.org/10.1016/j.energy.2009.04.029" target="_blank">Performance analysis in stepped solar still for effluent desalination</a><br>
-        <li> <a href="https://doi.org/10.1016/j.desal.2008.03.036" target="_blank">Effect of various absorbing materials on the thermal performance of solar stills</a><br>
-        <li> <a href="https://doi.org/10.1016/j.energy.2024.132628" target="_blank">ANALYSIS AND DESIGN OF CONCENTRATED SOLAR POWER COMPONENTS</a><br>
-        <li> <a href="https://doi.org/10.1016/j.egyr.2019.01.006" target="_blank">Investigation and review of mirrors reflectance in parabolic trough solar collectors (PTSCs)</a><br>
-        <li> <a href="https://doi.org/10.1007/s10973-023-12285-z" target="_blank">Active solar still with solar concentrating systems, Review</a><br>
-        <li> <a href="https://doi.org/10.1177/09576509211070118" target="_blank">Computational comparison and experimental performance analysis on heat  pipes using concentrating solar parabolic trough collector</a><br>
-        <li> <a href="https://doi.org/10.1016/B978-012373588-1/50014-0" target="_blank">CONDENSERS</a><br>
+        [1] <a href="https://doi.org/10.1016/j.desal.2011.03.069" target="_blank">Novel and low cost designs of portable solar stills </a><br>
+        [2]<a href="https://doi.org/10.1016/j.matpr.2020.09.598" target="_blank">Stepped solar still: A review on designs analysis</a><br>
+        [3] <a href="https://doi.org/10.1016/j.energy.2009.04.029" target="_blank">Performance analysis in stepped solar still for effluent desalination</a><br>
+        [4] <a href="https://doi.org/10.1016/j.desal.2008.03.036" target="_blank">Effect of various absorbing materials on the thermal performance of solar stills</a><br>
+        [5] <a href="https://doi.org/10.1016/j.energy.2024.132628" target="_blank">ANALYSIS AND DESIGN OF CONCENTRATED SOLAR POWER COMPONENTS</a><br>
+        [6] <a href="https://doi.org/10.1016/j.egyr.2019.01.006" target="_blank">Investigation and review of mirrors reflectance in parabolic trough solar collectors (PTSCs)</a><br>
+        [7] <a href="https://doi.org/10.1007/s10973-023-12285-z" target="_blank">Active solar still with solar concentrating systems, Review</a><br>
+        [8] <a href="https://doi.org/10.1177/09576509211070118" target="_blank">Computational comparison and experimental performance analysis on heat  pipes using concentrating solar parabolic trough collector</a><br>
+        [9] <a href="https://doi.org/10.1016/B978-012373588-1/50014-0" target="_blank">CONDENSERS</a><br>
 
 
 
