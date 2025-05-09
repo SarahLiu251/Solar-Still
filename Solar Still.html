@@ -1,423 +1,155 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=1200">
-    <title>Homepage - Solar Still </title>
-    <link rel="stylesheet" href="Style Still.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
 
-</head>
+/* MAIN */
 
+body {
+    margin: 10px;
+    font-family: 'Times New Roman', Courier, monospace;
+    line-height: 1.8; 
+    background-color: #f9f9fb;
+}
+section:nth-child(odd) {
+    background-color: #dedddd;
+  }
 
-    <div class="titlecenter"> Solar Still Using Active Mirror </div>
+/* HEADING FORMATTERS TYPES */
+.titlecenter {
+    text-align: center;
+    margin-left:30px; 
+    margin-right:30px;
+    font-weight:bold;
+    font-size:xx-large;
 
-    <div class="paracenter">  
-        Senior Design Project
-        <br>
-        Members: Catherine Lu, Yuehua Li, Shahmeer Tasaddaq, Sarah Liu
-        <br>
-        description of the project
-    </div>
-    <br>    
+}
+.subtitlecenter {
+    text-align: center;
+    margin-left:30px; 
+    margin-right:30px;
+    font-weight:bold;
+    font-size:x-large;
 
-    <div class="subtitle"> Design </div>
-    <br>    
-        <div class = "paracenter">
-            Initial Design
-                <a href="" target="_blank">
-                    <img src="p_1.0.png" alt="P1">
-                </a>
-        </div>
-        <div class = "paracenter">
-            CAD Model (components)
-        </div>
-        <div class = "paracenter">
-            Materials
-        </div>
-        <br>  
+}
+.subtitle {
+    margin-left:30px; 
+    margin-right:30px;
+    font-weight:bold;
+    font-size:x-large;
 
-        <div class="subtitle"> Methods </div>
-    <br>    
-        <div class = "subtitlecenter">
-            Mathematical Models  <br>
-        </div>
-        <div class="paracenter"> 
-            Click on the Parameter to bring to calculations
-        </div>
-        <div class = "subtitlecenter">
-            Mirror Geometry 
-        </div>
-       
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Parameter</th>
-                <th>Symbol</th>
-                <th>Value</th>
-                <th>Units</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Width of Aperture</td>
-                <td>W<sub>a</sub></td>
-                <td>24</td>
-                <td>inches</td>
-              </tr>
-              <tr>
-                <td><a href="#focal-section">Focal Length</a></td>
-                <td>f</td>
-                <td>9</td>
-                <td>inches</td>
-              </tr>
-              <tr>
-                <td><a href="#angle-section">Angle</a></td>
-                <td>&phi;</td>
-                <td>67.38</td>
-                <td>degrees</td>
-              </tr>
-              <tr>
-                <td><a href="#radius-section">Radius of Parabola</a></td>
-                <td>\[r_r\]</td>
-                <td>13</td>
-                <td>inches</td>
-              </tr>
-              <tr>
-                <td><a href="#vertical-section">Vertical Length of Parabola</a></td>
-                <td> \[H_p\]</td>
-                <td> 4</td>
-                <td>inches </td>
-              </tr>
-              <tr>
-                <td><a href="#arclength-section">Arc Length of Apperature</a></td>
-                <td> s </td>
-                <td> 4.95 </td>
-                <td>inches </td>
-              </tr>
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+/* PARAGRAPH FORMATTERS */
+.paracenter {
+    text-align: center;
+    margin-left:30px; 
+    margin-right:30px;
+}
+.math {
+    text-align: right;
+    margin-right: 40px;
+}
+
+/* IMAGE AND TEXT */
+.image-icon a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.image-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 98%;
+    
+}
+
+.image-icon {
+    display: flex;
+    justify-content: center; 
+    gap: 50px;
  
-            </tbody>
-          </table>
-          <div id="focal-section"; class = "paracenter">
-            <h3>Focal Length Calculation</h3> 
-                \[f = \frac{Wa}{4 \tan\left(\frac{\phi}{2}\right)} = \frac{x}{4a}\]
-          </div>
-          <div id="angle-section"; class = "paracenter">
-            <h3> Radial Angle Calculation</h3> 
-            \[
-            \frac{24 \text{ in}}{4 \tan\left(\frac{\phi}{2}\right)} = 9 
-            \]
-            \[
-            \phi = 67.38^\circ
-            \]
-          </div>
-          <div id="radius-section"; class = "paracenter">
-            <h3>Parabola Radius Calculation</h3> 
-                \[
-                r_r = \frac{2f}{1 + \cos\phi} = \frac{2(9)}{1 + \cos(67.38^\circ)} = 13 \:in
-                \]
-          </div>
-          <div id="vertical-section"; class = "paracenter">
-            <h3>Vertical Parabola Height Calculation</h3>
-            \[
-            H_p = \frac{Wa^2}{16f} = \frac{24^2}{16(9)} = 4 \:in
-            \]
-          </div>
-          <div id="arclength-section"; class = "paracenter">
-            <h3>Arc Length Calculation</h3> 
-            \[
-            s = \frac{H_p}{2} \left\{ \sec\left(\frac{\phi}{2}\right) \cdot \tan\left(\frac{\phi}{2}\right) +
-            \ln \left[ \sec\left(\frac{\phi}{2}\right) + \tan\left(\frac{\phi}{2}\right) \right] \right\}
-            \]
-            \[
-            s = \frac{4}{2} \left\{ \sec(33.69^\circ) \cdot \tan(33.69^\circ) +
-            \ln \left[ \sec(33.69^\circ) + \tan(33.69^\circ) \right] \right\}
-            \]
-            \[
-            s = 4.95 \:in \]
-          </div>
-        </div>  
+}
 
-        <li>Heat Transfers - Radiation, thrugh material, minimize heat loss  </li>
+.icon-text {
+    text-align: center; 
+}
 
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Parameter</th>
-                <th>Symbol</th>
-                <th>Value</th>
-                <th>Units</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="#massflowrate-section">Mass flow rate</a></td>
-                <td> \[\dot{m}\]</sub></td>
-                <td>0.926</td>
-                <td>g/s</td>
-              </tr>
-              <tr>
-                <td><a href="#heatflow-section">Heat absorbed </a></td>
-                <td> \[\dot{Q}\]</sub></td>
-                <td>5,748.29</td>
-                <td> BTU/day</td>
-              </tr>
-              <tr>
-                <td> <a href= "https://re.jrc.ec.europa.eu/pvg_tools/en/#MR" target="_blank">Solar Irradiation </a></td>
-                <td> G </td>
-                <td>1,274</td>
-                <td>BTU/ft<sup>2</sup></td>
-              </tr>
-              <tr>
-                <td> <a href= "#effciency-section">Overall Efficiency </a></td>
-                <td> \[\eta\]</td>
-                <td>0.4512</td>
-                <td></td>
-              </tr>
-            </tbody>
-        </table>
-        <div id="massflowrate-section"; class = "paracenter">
-            <h3>Mass Flow Rate Calculation</h3> 
-            \[\dot{m} = \frac{\dot{Q}}{c_p (T_{\text{out}} - T_{\text{in}})}
-            \]
-            \[\dot{m} = \frac{5748.28}{1 \cdot (212-54)} \]
-            \[\dot{m} = 0.926 \:g/s\]
-        </div>
-        <div id="effciency-section"; class = "paracenter">
-            <h3>Overall Efficiency Calculation</h3> 
-            \[\eta_{\text{optical}} = 0.94 \cdot 0.90
-            \]
-            \[
-            \eta_{\text{thermal}} = 0.67 \cdot 0.79
-            \]
-            \[
-            \eta = \eta_{\text{optical}} \cdot \eta_{\text{thermal}}\]
-            \[
-            \eta = 0.4512
-            \]
-        </div>
-        <div id="heatflow-section"; class = "paracenter">
-            <h3>Heat Absorbed Calculation</h3> 
-            \[\dot{Q} = G \cdot A \cdot \eta
-            \]
-            \[\dot{Q} = 1,274 \cdot 10 \cdot 0.4512
-            \]
-            \[\dot{Q} = 5,748.29\:BTU/day
-            \]
-        </div>
+.icon-text img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 98%;
+}
 
+  
+.icon-text p {
+    margin-top: 5px;
+}
 
-        <li> Pump Power Requirement </li>     
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Parameter</th>
-                <th>Symbol</th>
-                <th>Value</th>
-                <th>Units</th>
-                <th>Converted Imperial Value</th>
-                <th> Imperial Units</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                    <td><a href="#Re">Velocity</a></td>
-                    <td> V </td>
-                    <td>0.02933</td>
-                    <td>m/s</td>
-                    <td> 0.0962 </td>
-                    <td> ft/s </td>
-              </tr>
-              <tr>
-                <td>Pipe inner Diameter</td>
-                <td> D <sub>i</sub></td>
-                <td>0.00635</td>
-                <td>m</td>
-                <td>0.25 </td>
-                <td> in </td>
-              </tr>
-              <tr>
-                <td><a href="https://www.engineeringtoolbox.com/water-density-specific-weight-d_595.html" target="_blank">Water density</a></td>
-                <td> \[\rho\]</td>
-                <td>997</td>
-                <td>kg/m<sup>3</sup></td>
-                <td>62.2407 </td>
-                <td> lb/m<sup>3</sup> </td>
-              </tr>
-              <tr>
-                <td><a href="https://www.engineeringtoolbox.com/water-dynamic-kinematic-viscosity-d_596.html"target="_blank">kinematic viscosity</a></td>
-                <td> \[\upsilon\]</td>
-                <td>\[1.004 \cdot 10^{\text{-6}}\]</td>
-                <td>m<sup>2</sup>/s</td>
-                <td> \[1.0807 \cdot 10^{\text{-5}}\]</td>
-                <td>ft<sup>2</sup>/s </td>
-              </tr>
+.image-org {
+    width: 50px;
+    height: 50px;
 
-              <tr>
-                <td><a href="#Re">Reynolds Number</a></td>
-                <td> Re</td>
-                <td>185.50</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td><a href="#flowrate">Flow Rate</a></td>
-                <td>\[\dot{v}\]</td>
-                <td>\[0.9288 \cdot 10^{\text{-6}}\]</td>
-                <td>\[m^3/s\]</td>
-                <td> \[3.28 \cdot 10^{\text{-5}}\]</td>
-                <td>ft<sup>3</sup>/s </td>
-              </tr>
-              <tr>
-                <td><a href="#headloss">Head Loss</a></td>
-                <td> h<sub>f</sub></td>
-                <td>0.00726</td>
-                <td>m</td>
-                <td>0.0238</td>
-                <td> ft </td>
-              </tr>
-              <tr>
-                <td><a href="#power">Pump Power</a></td>
-                <td> P </td>
-                <td> 0.00006595 </td>
-                <td>W</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-        </table>
-        <div id="flowrate"; class = "paracenter">
-            <h3>Flowrate Calculation</h3> 
-            \[\dot{v} = \frac{\dot{m}}{\rho} \]
-            \[\dot{v} =  \frac{0.000926}{997} \]
-            \[\dot{v} = 0.9288 \cdot 10^{\text{-6}} \:m^{\text{3}} /s \]
     
-        </div>
-        <div id="Re"; class = "paracenter">
-            <h3>Reynolds Calculation</h3> 
-            \[ V = \frac{4 \cdot 0.9288 \cdot 10^{\text{-6}}}{\pi \cdot 0.00635^{\text{2}}} \]
-            \[ V = 0.0.2933 m/s \]
-            \[ Re = \frac{V \cdot D_{\text{i}}} {\upsilon} \]
-            \[ Re = \frac{0.02933 \cdot 0.00635}{1.004 \cdot 10^{\text{-6}}}\]
-            \[ Re = 185.5 \:(turbulent) \]
-        </div>
-        <div id="headloss"; class = "paracenter">
-            <h3>Headloss Calculation</h3> 
-            \[ h_{\text{f}} = \frac{fL \cdot V^{\text{2}}}{D \cdot 2g} \]
-            \[ h_{\text{f}} = \frac{65}{185.5} \cdot \frac{3.048}{0.00635} \cdot \frac{0.02933^2} { 9.81} \]
-            \[ h_{\text{f}} = 0.007261\: m \]
-        </div>
-        <div id="power"; class = "paracenter">
-            <h3>Pump Power Calculation</h3> 
-            \[ P = \rho \cdot g \cdot \dot{v} \cdot  h_{\text{f}} \]
-            \[ P = 997 \cdot 9.81 \cdot 0.9288 \cdot 10^{\text{-6}} \cdot 0.007261 \]
-            \[ P = 0.00006595\: W \]
-        </div>
+}
+img {
+    display: block; 
+  }
 
 
+/* TABLE */
+.table tr td {
+    text-align: center;
+  }
+.table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    background-color: #ffffff;
+  }
+  .table td, .table th {
+    padding: 10px;
+  }
+  .table tr {
+    border-bottom: 1px solid #0b0a0a;
+    border-left: 1px solid #0b0a0a;
+    border-right: 1px solid #0b0a0a;
+    border-top: 1px solid #0b0a0a;
 
-        <li>Support Structures </li>
-        <li>Bottom Fixed Supports </li>
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Parameter</th>
-                <th>Symbol</th>
-                <th>Value</th>
-                <th>Units</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                    <td><a href="#bottomdis">Max Displacement</a></td>
-                    <td> \[\delta_{\text{max}}\] </td>
-                    <td>0.001473</td>
-                    <td> in </td>
-              </tr>
-            <tr>
-                <td><a href="#bottomstress">Max Stress</a></td>
-                <td> \[\sigma_{\text{max}}\] </td>
-                <td>1224</td>
-                <td> psi </td>
-            </tr>
-            <tr>
-                <td><a href="https://asm.matweb.com/search/specificmaterial.asp?bassnum=ma6061t6" target="_blank">Elastic Modulus</a></td>
-                <td> E </td>
-                <td> 10,000</td>
-                <td> ksi </td>
-            </tr>
-         </tbody>
-        </table>
+  }
+  .table th {
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+/* COLUMNS */
 
-        <div id="bottomdis"; class = "paracenter">
-            <h3>Max Displacement Calculation</h3> 
-            \[ \delta_{\text{max}} = \frac{4FL^3}{Ebh^3} (rectangular\: cross \:section)\] 
-            \[ \delta_{\text{max}} = \frac{4 \cdot 4.25 \cdot 1.5^3}{10,000 \cdot 10^3 \cdot 2 \cdot 0.125^3}\]
-            \[ \delta_{\text{max}} = 0.00147\: in \]
-        </div>
-        <div id="bottomstress"; class = "paracenter">
-            <h3>Max Stress Calculation</h3> 
-            \[ \sigma_{\text{max}} = \frac{6FL}{bh^2} (rectangular\: cross \:section)\] 
-            \[ \sigma_{\text{max}} = \frac{ 6 \cdot 4.25 \cdot }{2 \cdot  0.125^2}\]
-            \[ \sigma_{\text{max}} = 1224\: psi \]
-        </div>
+.two-columns {
+    display: flex;
+    align-items: stretch;
 
+  }
 
+.columnbig {
+    flex: 9;
+  }
+.columnsmall {
+    flex: 1;
+    display: flex; 
 
-        <div class = "paracenter">
-            FEA and CFD
-        </div>
-        <li>eee</li>
-
-    <br>
-    <div class="subtitlecenter"> About Us </div>
-    <div class="image-icon">
-        <div class="icon-text">
-            <a href="" target="_blank">
-                <img src="T1.jpg" alt="Troll">
-            </a>
-            <p>Human One</p>
-        </div>
-    
-        <div class="icon-text">
-            <a href="" target="_blank">
-                <img src="T2.jpg" alt="Troll">
-            </a>
-            <p>Human Two</p>
-        </div>
-    
-        <div class="icon-text">
-            <a href="" target="_blank">
-                <img src="T3.jpg" alt="Troll">
-            </a>
-            <p>Human Three</p>
-        </div>
-    
-        <div class="icon-text">
-            <a href="" target="_blank">
-                <img src="T4.jpg" alt="Troll">
-            </a>
-            <p>Human Four</p>
-        </div>
-    </div>
-
-
-<br>    
-    <div class="subtitlecenter"> References </div>
-        [1] <a href="https://doi.org/10.1016/j.desal.2011.03.069" target="_blank">Novel and low cost designs of portable solar stills </a><br>
-        [2]<a href="https://doi.org/10.1016/j.matpr.2020.09.598" target="_blank">Stepped solar still: A review on designs analysis</a><br>
-        [3] <a href="https://doi.org/10.1016/j.energy.2009.04.029" target="_blank">Performance analysis in stepped solar still for effluent desalination</a><br>
-        [4] <a href="https://doi.org/10.1016/j.desal.2008.03.036" target="_blank">Effect of various absorbing materials on the thermal performance of solar stills</a><br>
-        [5] <a href="https://doi.org/10.1016/j.energy.2024.132628" target="_blank">ANALYSIS AND DESIGN OF CONCENTRATED SOLAR POWER COMPONENTS</a><br>
-        [6] <a href="https://doi.org/10.1016/j.egyr.2019.01.006" target="_blank">Investigation and review of mirrors reflectance in parabolic trough solar collectors (PTSCs)</a><br>
-        [7] <a href="https://doi.org/10.1007/s10973-023-12285-z" target="_blank">Active solar still with solar concentrating systems, Review</a><br>
-        [8] <a href="https://doi.org/10.1177/09576509211070118" target="_blank">Computational comparison and experimental performance analysis on heat  pipes using concentrating solar parabolic trough collector</a><br>
-        [9] <a href="https://doi.org/10.1016/B978-012373588-1/50014-0" target="_blank">CONDENSERS</a><br>
-
-
-
-</body>
+}
+@media (max-width: 768px) {
+    .two-columns {
+      flex-direction: column;
+    }
+  
+    .left-column,
+    .right-column {
+      flex: unset;
+      width: 100%;
+    }
