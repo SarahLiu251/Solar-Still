@@ -7,9 +7,9 @@ body {
     line-height: 1.8; 
     background-color: #f9f9fb;
 }
-section:nth-child(odd) {
-    background-color: #dedddd;
-  }
+section {
+    background-color: #adade0;
+}
 
 /* HEADING FORMATTERS TYPES */
 .titlecenter {
@@ -153,3 +153,4 @@ img {
       flex: unset;
       width: 100%;
     }
+}
