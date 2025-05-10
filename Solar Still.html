@@ -25,12 +25,16 @@
         </div>
     </section>
 
-    <br>    
-    <section> 
+    <br>
+    <div class="paracenter"> 
         <div class="subtitle"> Design </div>
+        Process from initial ideation to final design ideas
+    </div>
+    <section>
+         
         <br>    
             <div class = "paracenter">
-                Initial Design <br> 
+                <h3>Initial Design</h3>
                 <div >
                     <img src="p_1.0.png" alt="P1" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
                     
@@ -38,29 +42,26 @@
                 
             </div>
             <div class="paracenter">
-                CAD Model (components)
+                <h3>CAD Model (components)</h3>
                 <div >
                     <img src="Mirror.jpeg" alt="P3" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
                 </div>
             </div>
             <div class = "paracenter">
-                Materials
+               <h3> Materials</h3> 
             </div>
             <br>  
     </section>
         
-    <div class="subtitle"> Methods </div>
-    <br>    
-        <div class = "subtitlecenter">
-            Mathematical Models  <br>
-        </div>
-
+    <div class="paracenter"> 
+        <div class="subtitle"> Methods </div>
+         Click on the Parameter to bring to calculations
+         <h3> Mirror Geometry </h3>
+    </div>  
     <!-- Final Values -->
-        <div class="paracenter"> 
-            Click on the Parameter to bring to calculations
-        </div>
-        <li> Mirror Geometry </li>
+
         <section class="two-columns"> 
+
             <div class="columnbig"> 
                 <table class="table">
                     <thead>
@@ -121,152 +122,179 @@
             </div>
 
         </section>
-        <li>Heat Transfers - Radiation, thrugh material, minimize heat loss  </li>
-        <table class="table">
-              <thead>
-                <tr>
-                  <th>Parameter</th>
-                  <th>Symbol</th>
-                  <th>Value</th>
-                  <th>Units</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="#massflowrate-section">Mass flow rate</a></td>
-                  <td> \[\dot{m}\]</sub></td>
-                  <td>0.926</td>
-                  <td>g/s</td>
-                </tr>
-                <tr>
-                  <td><a href="#heatflow-section">Heat absorbed </a></td>
-                  <td> \[\dot{Q}\]</sub></td>
-                  <td>5,748.29</td>
-                  <td> BTU/day</td>
-                </tr>
-                <tr>
-                  <td> <a href= "https://re.jrc.ec.europa.eu/pvg_tools/en/#MR" target="_blank">Solar Irradiation </a></td>
-                  <td> G </td>
-                  <td>1,274</td>
-                  <td>BTU/ft<sup>2</sup></td>
-                </tr>
-                <tr>
-                  <td> <a href= "#effciency-section">Overall Efficiency </a></td>
-                  <td> \[\eta\]</td>
-                  <td>0.4512</td>
-                  <td></td>
-                </tr>
-              </tbody>
-        </table>
-        <li> Pump Power Requirement </li>     
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Parameter</th>
-                <th>Symbol</th>
-                <th>Value</th>
-                <th>Units</th>
-                <th>Converted Imperial Value</th>
-                <th> Imperial Units</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                    <td><a href="#Re">Velocity</a></td>
-                    <td> V </td>
-                    <td>0.02933</td>
-                    <td>m/s</td>
-                    <td> 0.0962 </td>
-                    <td> ft/s </td>
-              </tr>
-              <tr>
-                <td>Pipe inner Diameter</td>
-                <td> D <sub>i</sub></td>
-                <td>0.00635</td>
-                <td>m</td>
-                <td>0.25 </td>
-                <td> in </td>
-              </tr>
-              <tr>
-                <td><a href="https://www.engineeringtoolbox.com/water-density-specific-weight-d_595.html" target="_blank">Water density</a></td>
-                <td> \[\rho\]</td>
-                <td>997</td>
-                <td>kg/m<sup>3</sup></td>
-                <td>62.2407 </td>
-                <td> lb/m<sup>3</sup> </td>
-              </tr>
-              <tr>
-                <td><a href="https://www.engineeringtoolbox.com/water-dynamic-kinematic-viscosity-d_596.html"target="_blank">kinematic viscosity</a></td>
-                <td> \[\upsilon\]</td>
-                <td>\[1.004 \cdot 10^{\text{-6}}\]</td>
-                <td>m<sup>2</sup>/s</td>
-                <td> \[1.0807 \cdot 10^{\text{-5}}\]</td>
-                <td>ft<sup>2</sup>/s </td>
-              </tr>
+        <h3>Heat Transfers, Fluid Properties </h3>
+        <section class="two-columns"> 
+            <div class="columnbig">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Symbol</th>
+                        <th>Value</th>
+                        <th>Units</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="#massflowrate-section">Mass flow rate</a></td>
+                        <td> \[\dot{m}\]</sub></td>
+                        <td>0.926</td>
+                        <td>g/s</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#heatflow-section">Heat absorbed </a></td>
+                        <td> \[\dot{Q}\]</sub></td>
+                        <td>5,748.29</td>
+                        <td> BTU/day</td>
+                      </tr>
+                      <tr>
+                        <td> <a href= "https://re.jrc.ec.europa.eu/pvg_tools/en/#MR" target="_blank">Solar Irradiation </a></td>
+                        <td> G </td>
+                        <td>1,274</td>
+                        <td>BTU/ft<sup>2</sup></td>
+                      </tr>
+                      <tr>
+                        <td> <a href= "#effciency-section">Overall Efficiency </a></td>
+                        <td> \[\eta\]</td>
+                        <td>0.4512</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+              </table>
+            </div>
+            <div class="columnsmall" style="align-items: center" > 
 
-              <tr>
-                <td><a href="#Re">Reynolds Number</a></td>
-                <td> Re</td>
-                <td>185.50</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td><a href="#flowrate">Flow Rate</a></td>
-                <td>\[\dot{v}\]</td>
-                <td>\[0.9288 \cdot 10^{\text{-6}}\]</td>
-                <td>\[m^3/s\]</td>
-                <td> \[3.28 \cdot 10^{\text{-5}}\]</td>
-                <td>ft<sup>3</sup>/s </td>
-              </tr>
-              <tr>
-                <td><a href="#headloss">Head Loss</a></td>
-                <td> h<sub>f</sub></td>
-                <td>0.00726</td>
-                <td>m</td>
-                <td>0.0238</td>
-                <td> ft </td>
-              </tr>
-              <tr>
-                <td><a href="#power">Pump Power</a></td>
-                <td> P </td>
-                <td> 0.00006595 </td>
-                <td>W</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-        </table>
-        <li> Moving base gear and torque requirements </li>     
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Gear</th>
-                <th>Diametrial Pitch (teeth/in) </th>
-                <th>Pitch Diameter in</th>
-                <th>Number of teeth </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                    <td><a href="#Gear"> Base Gear </td>
-                    <td> 12  </td>
-                    <td>6.327</td>
-                    <td>76</td>
-              </tr>
-              <tr>
-                <td><a href="#Gear"> Motor Gear </td>
-                <td> 12  </td>
-                <td>1.583</td>
-                <td>19</td>
-             </tr>
-            </tbody>
-        </table>  
-        <li>Support Structures  </li>
-        <div class = "paracenter"> Bottom Fixed Supports </div>
+            </div>
+        </section>
+
+
+        <h3> Pump Power Requirement </h3>
+        <section class="two-columns">
+            <div class="columnbig">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Symbol</th>
+                        <th>Value</th>
+                        <th>Units</th>
+                        <th>Converted Imperial Value</th>
+                        <th> Imperial Units</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                            <td><a href="#Re">Velocity</a></td>
+                            <td> V </td>
+                            <td>0.02933</td>
+                            <td>m/s</td>
+                            <td> 0.0962 </td>
+                            <td> ft/s </td>
+                      </tr>
+                      <tr>
+                        <td>Pipe inner Diameter</td>
+                        <td> D <sub>i</sub></td>
+                        <td>0.00635</td>
+                        <td>m</td>
+                        <td>0.25 </td>
+                        <td> in </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.engineeringtoolbox.com/water-density-specific-weight-d_595.html" target="_blank">Water density</a></td>
+                        <td> \[\rho\]</td>
+                        <td>997</td>
+                        <td>kg/m<sup>3</sup></td>
+                        <td>62.2407 </td>
+                        <td> lb/m<sup>3</sup> </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.engineeringtoolbox.com/water-dynamic-kinematic-viscosity-d_596.html"target="_blank">kinematic viscosity</a></td>
+                        <td> \[\upsilon\]</td>
+                        <td>\[1.004 \cdot 10^{\text{-6}}\]</td>
+                        <td>m<sup>2</sup>/s</td>
+                        <td> \[1.0807 \cdot 10^{\text{-5}}\]</td>
+                        <td>ft<sup>2</sup>/s </td>
+                      </tr>
+        
+                      <tr>
+                        <td><a href="#Re">Reynolds Number</a></td>
+                        <td> Re</td>
+                        <td>185.50</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#flowrate">Flow Rate</a></td>
+                        <td>\[\dot{v}\]</td>
+                        <td>\[0.9288 \cdot 10^{\text{-6}}\]</td>
+                        <td>\[m^3/s\]</td>
+                        <td> \[3.28 \cdot 10^{\text{-5}}\]</td>
+                        <td>ft<sup>3</sup>/s </td>
+                      </tr>
+                      <tr>
+                        <td><a href="#headloss">Head Loss</a></td>
+                        <td> h<sub>f</sub></td>
+                        <td>0.00726</td>
+                        <td>m</td>
+                        <td>0.0238</td>
+                        <td> ft </td>
+                      </tr>
+                      <tr>
+                        <td><a href="#power">Pump Power</a></td>
+                        <td> P </td>
+                        <td> 0.00006595 </td>
+                        <td>W</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="columnsmall" style="align-items: center" >
+               
+            </div>
+
+        </section>     
+
+        <h3> Moving base gear and torque requirements </h3>
+        <section class="two-columns">
+            <div class="columnbig">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Gear</th>
+                        <th>Diametrial Pitch (teeth/in) </th>
+                        <th>Pitch Diameter in</th>
+                        <th>Number of teeth </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                            <td><a href="#Gear"> Base Gear </td>
+                            <td> 12  </td>
+                            <td>6.327</td>
+                            <td>76</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#Gear"> Motor Gear </td>
+                        <td> 12  </td>
+                        <td>1.583</td>
+                        <td>19</td>
+                     </tr>
+                    </tbody>
+                </table>  
+            </div>
+            <div class="columnsmall" style="align-items: center" >
+
+            </div>
+        </section>    
+        
+        
+        <h3>Support Structures  </h3>
         <section class="two-columns"> 
             <div class="columnbig"> 
+                <h3 class="paracenter">Bottom Fixed Supports </h3>
                 <table class="table">
                     <thead>
                       <tr>
@@ -299,12 +327,95 @@
                 </table>
             </div>
             <div class="columnsmall" style="align-items: center" > 
-                <img src="Bottom support.png" alt="P2"  style="width: 400px; height: auto;" >
+                <figure>
+                    <img src="Bottom support.png" alt="P2"  style="width: 400px; height: auto; align-items: center;"  >
+                    <figcaption> Bottom Fixed Support </figcaption>
+                    <img src="Bottom_2d.png" alt="P2" style="width: 400px; height: auto; align-items: center;" >
+                    <figcaption> 2D representation of each supporting leg load </figcaption>
+                </figure>
             </div>
         </section> 
+        <div class = "paracenter"> 
+            
+            <br>
+            <section class="two-columns">
+                <div class="columnbig">
+                    <h3 class="paracenter"> Middle Support structure Elements</h3>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Element </th>
+                            <th> Area (A) m<sup>2</sup></th>
+                            <th> Second moment of Inertia (I) m<sup>4</sup></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                                <td> 1 </td>
+                                <td> \[ 0.004 \] </td>
+                                <td>\[ 8.53^{\text{-6}}  \]</td>
+                          </tr>   
+                          <tr>
+                            <td> 2 </td>
+                            <td> \[ 0.0045 \] </td>
+                            <td>\[  2.344^{\text{-7}} \]</td>
+                         </tr> 
+                         <tr>
+                            <td> 3 </td>
+                            <td> \[ 0.00813 \] </td>
+                            <td>\[ 7.152^{\text{-5}} \]</td>
+                         </tr> 
+                         <tr>
+                            <td> 4 </td>
+                            <td> \[ 0.006 \] </td>
+                            <td>\[  2.88^{\text{-5}} \]</td>
+                         </tr> 
+                         
+        
+                        </tbody>      
+                    </table>
+
+                </div>
+                <div class="columnsmall" style="align-items: center" >
+                    <div class="columnsmall" style="align-items: center" >
+                        <figure>
+                            <img src="Middle_Grid.png" alt="P2"  style="width: 400px; height: auto; align-items: center;" >
+                            <figcaption> 2D Representation of Grid structure of Middle Support Structure</figcaption>
+                            <img src="Force_Load.png" alt="P2"  style="width: 400px; height: auto; align-items: center;" >
+                            <figcaption> Force and moment equivalence from distrbuted weight force </figcaption>
+                        </figure>
+                        
+                    </div>
+
+                </div>
+            </section>
 
 
- <!-- Calculations */ -->
+        </div>
+
+<!-- Calculations */ -->
+        <!-- Bottom Support */ -->
+        <div class = "paracenter">
+            <h3>Middle Support Calculations</h3> 
+            Stiffness Matrix - will be applied for wach element of simplified frame 
+            \[
+            [\mathbf{k}] = \frac{E}{L} \times
+            \begin{bmatrix}
+            AC^2 + \frac{12I}{L^2} S^2 & \left( A - \frac{12I}{L^2} \right) CS & -\frac{6I}{L}S & -\left( AC^2 + \frac{12I}{L^2} S^2 \right) & -\left( A - \frac{12I}{L^2} \right) CS & -\frac{6I}{L}S \\
+            \cdots & \left (AS^2 + \frac{12I}{L^2} C^2 \right) CS & \frac{6I}{L}C & -\left( A - \frac{12I}{L^2} \right) CS & -\left( AS^2 + \frac{12I}{L^2} C^2 \right) & \frac{6I}{L}C \\
+            \cdots & \cdots & 4I & \frac{6I}{L}S & \frac{-6I}{L}C & 2I \\
+            \cdots & \cdots & \cdots & AC^2 + \frac{12I}{L^2} S^2 & \left( A - \frac{12I}{L^2} \right) CS & \frac{6I}{L}S \\
+            \cdots & \cdots & \cdots & \cdots & AS^2 + \frac{12I}{L^2} C^2 & -\frac{6I}{L}C \\
+            \cdots & \cdots & \cdots & \cdots & \cdots & 4I
+            \end{bmatrix}
+            \]
+            Solutions for each element is cascaded to a global matrix and displacements of each mode is solved
+            <br> with a distubuted weight estimate around 25 lb based on mirror and rotational mechanism sizing:
+            \[ [F] = [\mathbf{k}][x]\]
+            \[ \sigma = \frac{E}{L} [ -1 \,\,\, \,\,1\,\,-1 \,\,\,\, 1\,] {d}\]
+            Set up is replicated in FEA with resulting displacements and stress of each elements
+        
+        </div>
 
   <!-- mirror -->
           <div id="focal-section"; class = "paracenter">
