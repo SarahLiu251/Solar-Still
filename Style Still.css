@@ -5,13 +5,13 @@ body {
     margin: 10px;
     font-family: 'Times New Roman', Courier, monospace;
     line-height: 1.8; 
-    background-color: #d6d6db;
+    background-color: #efe2f4;
 }
 h3 {
     background-color: rgb(237, 236, 236);
 }
 h2 {
-    background-color:#efefef;
+    background-color:#e1dede;
     padding: 5px 20px;
     display: inline-block;
 
