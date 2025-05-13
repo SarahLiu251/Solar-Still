@@ -24,7 +24,7 @@
             
         </div>
         <div class="text">
-            Description of the project - The project looks to design and produce a solar still using 
+            <b>Description of the project: </b>The project looks to design and produce a solar still using 
             active mirrors, utilizing solar power to distill water to drinkable levels.
         </div>
     </section>
@@ -41,15 +41,15 @@
             <div class = "paracenter">
                 <h2>Initial Design</h2>
                 <div >
-                    <img src="p_1.0.png" alt="P1" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
+                    <img src="p_1.0.png" alt="initialdrawing" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
                     
                 </div>
-                
             </div>
-            <div class="paracenter">
-                <h2>CAD Model (components)</h2>
+            <div class = "paracenter">
+                <h2>Final Design</h2>
                 <div >
-                    <img src="Mirror.jpeg" alt="P3" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
+                    <img src="" alt="Assembly" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
+                    
                 </div>
             </div>
             <div class = "paracenter">
@@ -66,6 +66,14 @@
     <br>
     <div class="paracenter">
         <h2>Mirror Geometry</h2>
+    </div>
+    <div class="text">
+        <b> Design: </b>The central piece of the project, the mirror, will take on the shape of a parabolic trough 
+        to utilize the focal point to maximize energy concentration. Ideally, the mirror would be outsourced; 
+        however, current conditions limit us in both budget and availability of the exact mirror we need. 
+        <br>
+        <b> Materials and Manufacturing: </b>Realistically, an acrylic sheet will be used to back a silver Mylar sheet, with a rated reflectance of 94%. 
+        The mirror will be manufactured to the calculated dimensions using heat guns and high-temperature rated adhesives.
     </div>
          
         <section class="two-columns"> 
@@ -127,7 +135,8 @@
             <div class="columnsmall" style="align-items: center" > 
                 <figure>
                     <img src="Mirror_Components.png" alt="P2"  style="width: 500px; height: auto;box-shadow: 0 2px 10px rgba(0,0,0,0.1);" >
-                    <figcaption class="paracenter"> <a href="#Web"> Parameters of the parabolic trough collector [10] </a> </figcaption>
+                    <figcaption class="paracenter"> <a href="#Web"> Parameters of the parabolic trough collector [10] </a> </figcaption> <br>
+                    <img src="Mirror.jpeg" alt="P3" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
                 </figure>
 
             </div>
@@ -135,6 +144,13 @@
         </section>
         <div class="paracenter">
             <h2>Heat Transfers, Fluid Properties </h2>
+        </div>
+        <div class="text">
+            <b> Design: </b> The piping system includes a section of tubing centered at the focal point of the mirror and held in the position of the focal line as the active mirror realigns itself along the sun's path throughout the day. 
+            
+            <br>
+            <b> Materials and Manufacturing: </b>The piping system consists of two copper tubes connected to a water source tank and a purifie water storage unit. Pipe will be assembled with glass insulation surrounding the copper pipe along the mirror focal length. 
+            To ensure alignment, a silicon sealant will assist an FDM printed end support caps, as to directly customize. Flexible tubings will be used in connecting joint fittings between components in sections of changing heights. 
         </div>
         
         <section class="two-columns"> 
@@ -177,16 +193,32 @@
               </table>
             </div>
             <div class="columnsmall" style="align-items: center" > 
+                <figure>
+                    <img src="Thermal_block.png" alt="thermal block diagram"  style="width: 500px; height: auto;box-shadow: 0 2px 10px rgba(0,0,0,0.1);" >
+                    <figcaption class="paracenter">Block Diagram of the thermal fluid system of the distiller</figcaption> 
+                </figure>
 
             </div>
         </section>
 
         <div class="paracenter"> 
-            <h2> Pump Power Requirement </h2>
+            <h2> Power Requirement </h2>
+        </div>
+        <div class="text">
+            <b> Design: </b> Flow rate and fluid properties found helped to determine the necessary power to be provided by the pump.
+            Solar energy will power the pumps and the motor, and 60 watts is the approximate maximum power usage throughout the day, 
+            according to a conservative estimate based on the motor's maximum power input. 
+            <br>
+            <b> Materials and Manufacturing: </b> The following calculations are used to help determine pump choices. The power input from the motor was done based 
+                on <a href="#motorpower">frictional torque.</a> Solar Cells will be soldered together in place of a premade solar panel.
+            
         </div>
         
         <section class="two-columns">
             <div class="columnbig">
+                <div class="paracenter"> 
+                    <h2> Pump Power Requirement </h2>
+                </div>
                 <table class="table">
                     <thead>
                       <tr>
@@ -275,6 +307,11 @@
         <div class="paracenter"> 
             <h2> Moving base gear and torque requirements </h2>
         </div>
+        <div class="text">
+            <b> Design: </b> Two customized gear dimensions are needed for the rotating mechanism for the base due to the lazy-susan bearing dimensions. <br>
+            <b> Materials and Manufacturing: </b> The customized gearing system used to move the base rotational axis will be made through FDM printing.
+            The smaller gear is mounted with supports onto the motor.
+        </div>
 
        
         <section class="two-columns">
@@ -312,12 +349,19 @@
         <div class="paracenter"> 
             <h2>Support Structures  </h2>
         </div>
+        <div class="text">
+            <b> Material and Manufacturing: </b>The support structure of the mirror and system will be made using Aluminum 6061 beams that will take on curved structures and work like cantilever beams attached to an Aluminum plate at its four corners. Three holes in each corner will be drilled for nuts and bolts to be used to attach the 
+                legs to the base of the support design, while an additional four holes will be drilled centered around the middle of the 
+                plate for the attachment of the lazy susan contraption. 
+        </div>
         
         <section class="two-columns"> 
             <div class="columnbig"> 
                 <div class="paracenter">
                     <h2>Bottom Fixed Supports </h2>
                 </div>
+                <div class="text"> <b> Design: </b>The middle support structure is attached to the rotating base portion of the lazy-susan bearings and has 4 outreaching arms to support at the bearings 
+                    and below the mirror. </div>
                 
                 <table class="table">
                     <thead>
@@ -360,11 +404,16 @@
             </div>
         </section>             
             <br>
-            <section class="two-columns">
+        <section class="two-columns">
                 <div class="columnbig">
                     <div class="paracenter">
-                        <h2>Middle Support structure Elements </h2>
+                        <h2>Middle Support Structure Elements </h2>
                     </div>
+                    <div class="text">
+                        <b> Design: </b>The support for the fixed base was designed based on the sizes of the mirror and other components sized earlier. The fixed portion of the bearing rests on 
+                        the base of the bottom base support structure with four leg supports. 
+                    </div>
+
                     <table class="table">
                         <thead>
                           <tr>
@@ -377,44 +426,71 @@
                           <tr>
                                 <td> 1 </td>
                                 <td> \[ 0.004 \] </td>
-                                <td>\[ 8.53^{\text{-6}}  \]</td>
+                                <td>\[ 8.53 \cdot10^{\text{-6}}  \]</td>
                           </tr>   
                           <tr>
                             <td> 2 </td>
                             <td> \[ 0.0045 \] </td>
-                            <td>\[  2.344^{\text{-7}} \]</td>
+                            <td>\[  2.344\cdot10^{\text{-7}} \]</td>
                          </tr> 
                          <tr>
                             <td> 3 </td>
                             <td> \[ 0.00813 \] </td>
-                            <td>\[ 7.152^{\text{-5}} \]</td>
+                            <td>\[ 7.152\cdot10^{\text{-5}} \]</td>
                          </tr> 
                          <tr>
                             <td> 4 </td>
                             <td> \[ 0.006 \] </td>
-                            <td>\[  2.88^{\text{-5}} \]</td>
+                            <td>\[  2.88\cdot10^{\text{-5}} \]</td>
                          </tr> 
                          
         
                         </tbody>      
                     </table>
+
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Element </th>
+                            <th> \[\sigma_{\text{axial}} \; (psi)\]</th>
+                            <th> \[\sigma_{\text{bending}} \; (psi)\]</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                                <td> 1 </td>
+                                <td> 1,384.6</td>
+                                <td>852.49</td>
+                          </tr>
+                          <tr>
+                                <td> 2 </td>
+                                <td>54.787</td>
+                                <td>0</td>
+                         </tr>
+                         <tr>
+                                <td> 3 </td>
+                                <td>26.016</td>
+                                <td>0</td>
+                         </tr>
+                         <tr>
+                                <td> 4 </td>
+                                <td>0</td>
+                                <td>51.193</td>
+                         </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="columnsmall" style="align-items: center" >
-                    <div class="columnsmall" style="align-items: center" >
-                        <figure>
-                            <img src="Middle_Grid.png" alt="P2"  style="width: 400px; height: auto; align-items: center;" >
-                            <figcaption class="paracenter"> 2D Representation of Grid structure of Middle Support Structure</figcaption>
-                            <img src="Force_Load.png" alt="P2"  style="width: 400px; height: auto; align-items: center;" >
-                            <figcaption class="paracenter"> Force and moment equivalence from distrbuted weight force </figcaption>
-                        </figure>
-                        
-                    </div>
+                    <figure>
+                        <img src="Middle_Grid.png" alt="P2"  style="width: 400px; height: auto; align-items: center;"  >
+                        <figcaption class="paracenter"> Middle truss support representation </figcaption>
+                        <img src="Force_Load.png" alt="P2" style="width: 400px; height: auto; align-items: center;" >
+                        <figcaption class="paracenter"> distributed weight equivalent force loading </figcaption>
+                    </figure>
 
                 </div>
-            </section>
+        </section>
 
-
-        </div>
 
 <!-- Calculations */ -->
 <!-- Middle support -->
@@ -438,6 +514,14 @@
             \[ \sigma = \frac{E}{L} [ -1 \,\,\, \,\,1\,\,-1 \,\,\,\, 1\,] {d}\]
             Set up is replicated in FEA with resulting displacements and stress of each elements
         
+        </div>
+        <div class = "paracenter">
+            <div>
+                <img src="Middle_StressFEA.png" alt="initialdrawing" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
+                Stress plot of 2D truss representation of middle support <br>
+                <img src="Middle_disFEA.png" alt="disFEA" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
+                Displacement plot of 2D truss representation of middle support
+            </div>
         </div>
 
   <!-- mirror -->
@@ -480,7 +564,6 @@
             s = 4.95 \:in \]
           </div>
         </div>  
-
 <!-- pump power -->
         <div id="massflowrate-section"; class = "paracenter">
             <h3>Mass Flow Rate Calculation</h3> 
@@ -547,7 +630,7 @@
            Dimensions of the motor gear based on the base moving gear sized by the lazy susan bearing
            \[ N = Pitch\: Diameter \cdot Diametral \:Pitch \]
         </div>
-        <div id="Gear"; class = "paracenter">
+        <div id="motorpower"; class = "paracenter">
             <h3>Frictional Torque</h3>
             \[ \tau = \mu \cdot F \cdot r \]
             \[\tau = 0.003 \cdot \ (11.3 \: kg \cdot 9.81 \: \frac{m}{s} \cdot \frac{0.1607}{2} \: m ) \]
@@ -562,12 +645,25 @@
             \[ \delta_{\text{max}} = \frac{4 \cdot 4.25 \cdot 1.5^3}{10,000 \cdot 10^3 \cdot 2 \cdot 0.125^3}\]
             \[ \delta_{\text{max}} = 0.00147\: in \]
         </div>
+        <div class = "paracenter">
+            <div >
+                <img src="bottom_dispFEA.png" alt="disFEA" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
+                Displacement plot bottom support
+            </div>
+        </div>
         <div id="bottomstress"; class = "paracenter">
             <h3>Max Stress Calculation</h3> 
             \[ \sigma_{\text{max}} = \frac{6FL}{bh^2} (rectangular\: cross \:section)\] 
             \[ \sigma_{\text{max}} = \frac{ 6 \cdot 4.25 \cdot }{2 \cdot  0.125^2}\]
             \[ \sigma_{\text{max}} = 1224\: psi \]
         </div>
+        <div class = "paracenter">
+            <div >
+                <img src="bottom_stressFEA.png" alt="initialdrawing" style="width:500px ; height: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" class="center"> 
+                Stress plot of fixed bottom support <br>
+            </div>
+        </div>
+<!-- more middle support but FEA -->
 
 
 
